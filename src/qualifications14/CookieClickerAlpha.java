@@ -46,24 +46,8 @@ public class CookieClickerAlpha {
 		}
 	}
 
-	private static int[][] toInt(Iterator<String> lines, int size) {
-		int[][] ints = new int[size][size];
-		for (int i = 0; i < size; i++) {
-			ints[i] = toInt(lines.next().split(" "));
-		}
-		return ints;
-	}
-
 	private static int toInt(String string) {
 		return Integer.parseInt(string);
-	}
-
-	private static int[] toInt(String[] strings) {
-		int[] ints = new int[strings.length];
-		for (int i = 0; i < strings.length; i++) {
-			ints[i] = Integer.parseInt(strings[i]);
-		}
-		return ints;
 	}
 
 	private static double[] toDouble(String[] strings) {

@@ -9,7 +9,7 @@ import java.util.List;
 public class StoreCredit {
 
 	public static void main(String[] args) throws IOException {
-		String path = "files/StoreCredit-small-practice.bin";
+		String path = "files/practice/StoreCredit-small-practice.bin";
 		List<String> lines = Files.readAllLines(FileSystems.getDefault().getPath(path), Charset.forName("UTF-8"));
 		int n = Integer.parseInt(lines.get(0));
 		int linesPerCase = 3;
