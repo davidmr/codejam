@@ -2,6 +2,7 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
@@ -12,6 +13,19 @@ public class Base {
 		List<String> allLines = Files.readAllLines(FileSystems.getDefault().getPath(path), Charset.forName("UTF-8"));
 		Iterator<String> lines = allLines.iterator();
 		int testCases = toInt(lines.next());
+		for (int testCase = 1; testCase <= testCases; testCase++) {
+
+		}
+	}
+
+	private static void answer(int testCase, Object ans) {
+		System.out.println("Case #" + testCase + ": " + ans);
+	}
+
+	private static void print(Object[][] data) {
+		for (int i = 0; i < data.length; i++) {
+			System.out.println(Arrays.toString(data[i]));
+		}
 	}
 
 	private static Integer[][] toInt(Iterator<String> lines, int size) {
