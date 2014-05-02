@@ -55,4 +55,20 @@ public class Base {
 		}
 		return floats;
 	}
+
+	private static String padLeft(String src, String pad, int length) {
+		StringBuilder sb = new StringBuilder(src);
+		while (sb.length() < length) {
+			sb.insert(0, pad);
+		}
+		return sb.toString();
+	}
+
+	private static void fill(Object[][] data, Object obj) {
+		for (int i = 0; i < data.length; i++) {
+			for (int j = 0; j < data[i].length; j++) {
+				data[i][j] = obj;
+			}
+		}
+	}
 }
